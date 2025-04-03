@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical POS Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Medical POS Checkout</h1>
+
+        <!-- Patient Information Form -->
+        <div class="form-section">
+            <h2>Patient Information</h2>
+            <form id="patient-form">
+                <label for="name">Patient Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
+
+                <label for="insurance">Insurance (Optional):</label>
+                <input type="text" id="insurance">
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+
+        <!-- Service Selection Section -->
+        <div class="form-section">
+            <h2>Select Medical Services</h2>
+            <form id="service-form">
+                <div class="service-option">
+                    <input type="checkbox" id="consultation" value="50">
+                    <label for="consultation">Consultation ($50)</label>
+                </div>
+                <div class="service-option">
+                    <input type="checkbox" id="blood-test" value="30">
+                    <label for="blood-test">Blood Test ($30)</label>
+                </div>
+                <div class="service-option">
+                    <input type="checkbox" id="xray" value="100">
+                    <label for="xray">X-Ray ($100)</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Add to Cart</button>
+            </form>
+        </div>
+
+        <!-- Checkout Section -->
+        <div class="checkout-section">
+            <h2>Checkout</h2>
+            <p><strong>Total: $<span id="total">0</span></strong></p>
+            <button id="checkout-btn" class="submit-btn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
